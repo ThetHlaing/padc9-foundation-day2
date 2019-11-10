@@ -4,10 +4,10 @@ def uppercase_decorator(function):
     print("in the uppercase decorator function")
     def wrapper():
         print("in the uppercase decorator wrapper function")
-        func = function()
+        result = function()
         
-        make_uppercase = func.upper()
-        print('Making uppercase');
+        make_uppercase = result.upper()
+        print('Making uppercase')
         
         return make_uppercase
 
@@ -28,10 +28,10 @@ def split_string_decorator(function):
     return wrapper
 
 
-@split_string_decorator
+# @split_string_decorator
 @uppercase_decorator
 def say_hi():
     print("in the target function")
-    return "hello there"
+    return "hello there, mg mg"
 
 print(say_hi())
